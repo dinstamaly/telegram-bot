@@ -1,0 +1,11 @@
+.idea
+/tmp/
+/migrations/
+*.log
+*.pyc
+*/*.pyc
+creadentials.py
+venv/
+__pycache__/
+bot_data
+
