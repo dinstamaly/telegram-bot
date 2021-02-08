@@ -1,7 +1,9 @@
 
 import telegram
-from key_buttons import tele_button, nav_button, deposit_menu, credit1_menu, credit2_menu, credit3_menu, credit4_menu, \
-    currency
+from key_buttons import (
+    tele_button, nav_button, deposit_menu, credit1_menu,
+    credit2_menu, credit3_menu, credit4_menu,
+    currency)
 
 
 def main_menu_keyboard():
@@ -23,7 +25,9 @@ def main_menu_keyboard():
             telegram.KeyboardButton(tele_button[7])
         ]
     ])
-    return telegram.ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def atm_menu_keyboard():
@@ -31,7 +35,9 @@ def atm_menu_keyboard():
         [telegram.KeyboardButton(nav_button[0], request_location=True)],
         [telegram.KeyboardButton(nav_button[1])],
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def depo_menu_keyboard():
@@ -39,7 +45,9 @@ def depo_menu_keyboard():
         [telegram.KeyboardButton(nav_button[0], request_location=True)],
         [telegram.KeyboardButton(nav_button[1])]
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def deposits_menu_keyboard():
@@ -55,7 +63,9 @@ def deposits_menu_keyboard():
         ],
         [telegram.KeyboardButton(nav_button[1])]
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def credits_menu_keyboard():
@@ -67,7 +77,9 @@ def credits_menu_keyboard():
         ],
         [telegram.KeyboardButton(nav_button[1])]
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def potreb_menu_keyboard():
@@ -83,7 +95,9 @@ def potreb_menu_keyboard():
         ],
         [telegram.KeyboardButton(nav_button[2])]
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def ipoteka_menu_keyboard():
@@ -95,7 +109,9 @@ def ipoteka_menu_keyboard():
         ],
         [telegram.KeyboardButton(nav_button[2])]
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def auto_menu_keyboard():
@@ -104,7 +120,9 @@ def auto_menu_keyboard():
         [telegram.KeyboardButton(credit4_menu[1])],
         [telegram.KeyboardButton(nav_button[2])]
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
 
 
 def currency_menu_keyboard():
@@ -135,4 +153,6 @@ def currency_menu_keyboard():
         ],
         [telegram.KeyboardButton(nav_button[1])]
     ])
-    return telegram.ReplyKeyboardMarkup(menu_keyboard, resize_keyboard=True, one_time_keyboard=False)
+    return telegram.ReplyKeyboardMarkup(
+        menu_keyboard, resize_keyboard=True, one_time_keyboard=False
+    )
