@@ -14,6 +14,6 @@ credit3_menu = ['ипотека', 'Государственная ипотечн
                 'На приобретение прочей собственности Банка']
 credit4_menu = ['В салонах-партнерах', 'На нового или подержанного автомобиля']
 currency = ['USD', 'EUR', 'KZT', 'RUB', 'GBP', 'CHF', 'AUD', 'BYN',
-            'CAD', 'CNY', 'UAH', 'UZS', 'JPY', 'XAU', 'XAG','XPT']
+            'CAD', 'CNY', 'UAH', 'UZS', 'JPY', 'XAU', 'XAG', 'XPT']
 
 

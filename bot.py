@@ -7,13 +7,12 @@ from telegram.ext import (
     PicklePersistence,
 )
 
+from button_dict import dep_menu, cred_menu, info_button
 from creadentials import bot_token, map_token, atm_url, currency_url
 from key_buttons import (
     tele_button, nav_button, credit1_menu, deposit_menu, credit2_menu,
     credit3_menu, credit4_menu, currency
 )
-from button_dict import dep_menu, cred_menu, info_button
-
 from menu_keyboards import (
     main_menu_keyboard, atm_menu_keyboard, depo_menu_keyboard,
     deposits_menu_keyboard, credits_menu_keyboard, potreb_menu_keyboard,
@@ -25,13 +24,15 @@ from messages import (
 )
 
 TOKEN = bot_token
-MAP_TOKEN = map_token
 
 
 ############################### Bot ##########################################
-def start(bot, update):
-    bot.message.reply_text(
-        main_menu_message(),
+def start(update: Update, context: CallbackContext):
+    update.message.reply_text(
+        "Добро пожалоавть, {username}, выберите опцию: ".format(
+            username=update.effective_user.first_name \
+                if update.effective_user.first_name is not None \
+                else update.effective_user.username),
         reply_markup=main_menu_keyboard()
     )
 
@@ -233,10 +234,6 @@ def code_info(update: Update, context: CallbackContext):
                 f"{currency['code']}: {currency['buy']} - {currency['sell']}\n"
                 f"НБКР: {currency['nbkr']}"
             )
-
-
-def main_menu_message():
-    return "Добро пожалоавть, выберите опцию: "
 
 
 updater = Updater(TOKEN, persistence=PicklePersistence(filename='bot_data'))

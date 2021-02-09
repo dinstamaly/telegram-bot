@@ -27,7 +27,6 @@ Ria money transfer
 Western Union
 Юнистрим
 Contact
-Faster
 Blizko
 Золотая корона
 Money Gram
